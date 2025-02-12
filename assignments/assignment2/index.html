@@ -2,24 +2,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 2</title>
+<!-- https://www.w3schools.com/html/html_table_borders.asp
+^ above page informed the following "style" section -->
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    </style>
 </head>
 
 <body>
-    <div >
+
+<!-- as per this stackoverflow thread: 
+https://stackoverflow.com/questions/17219757/how-to-place-text-and-an-image-next-to-each-other-in-html
+    
+I want to place my profile image to the left of my name and have my name and short blurb aligned on 
+the right side of the image, left justified. So, I will add 'style="float:left"' to the image,
+and then, on the next element (in this case it would be the <nav> tag) I'll add 'style="clear: both"'
+so that the elements that come after don't bring themselves up and look all messy.
+
+I also added "margin-right" to the image, so that the text is spaced a little bit.
+-->
+
+<header>
+<div>
+    <img src="./images/profile.jpeg" alt="Roan Rafter" width="20%" style="float: left; margin-right: 20px;">
     <h1>Roan Rafter</h1>
-    <h2 style = "color: darkgray; margin-top: -20px;"> San Francisco native, <br> studying Computer Science at SF State</h2>
+    <h2 style = "color: darkgray;"> San Francisco native, <br> studying Computer Science at SF State</h2>
+
+    <!--
+        for some reason, the "margin-left" attribute does not seem to push the bullet points over
+        EXCEPT in the iframe, where the bullet points DO move... 
+    -->
+
+    <nav style="margin-left: 20px;">
+        <ul>
+            <li><a href="#about">About me</a></li>
+            <!-- li><a href="#Skills">Skills</a></li -->
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contact">Contact Me!</a></li>
+        </ul>
+    </nav>
+    
+</div>
+</header>
+
+<main style="clear: both;">
 
     <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Standing-spinning-cat-ubrw30x0hyi4v9oh.gif" alt = "spinning cat" width="300">
-    <iframe src="index.html" frameborder="0" height="300"></iframe>
+    <iframe src="index.html" frameborder="0" height="300", width="800"></iframe>
 
-    <p> I am learning <span style="color: blueviolet; font-weight: bold;"> CSC317 </span> </p>
-    
-    </div>
-    <p>
-        I'm Roan, a computer science major at SF state, graduating in 2027! 
-    </p>
+    <!-- p> I am learning <span style="color: blueviolet; font-weight: bold;"> CSC317 </span> </p -->
 
+    <section id="about">
+        <h2>About me:</h2>
+        <p>
+            I'm Roan, a computer science major at SF state, graduating in 2027! I work at golden boy pizza,
+            and love to explore the city in my free time. I graduated from Lowell high school in 2023, and made 
+            a few cool demonstrations of the java I learned, check them out below this!
+        </p>
+    </section>
+    <section id="Education">
+        <h2>Education:</h2>
+        <h3>Degrees:</h3>
+        <ul>
+            <li>Lowell High school, 2023</li>
+            <li>Bachelor's of science in Computer Science, San Francisco State University, 2027</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>School</th>
+                    <th>skills</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>CS110</td>
+                <td>Cal Poly Humboldt</td>
+                <td>Basic C++ functions, logic, program structure</td>
+            </tr>
+            <tr>
+                <td>CS115</td>
+                <td>Cal Poly Humboldt</td>
+                <td>Object-Oriented C++, Tester methods, multi-inheritence and polymorphism</td>
+            </tr>
+            <tr>
+                <td>CS220: Data Structures</td>
+                <td>SF State</td>
+                <td>Data container design using Java OOP</td>
+            </tr>
+        </table>
+    </section>
+    <section id="Projects">
+        <h2>Projects:</h2>
+    </section>
+    <section id="Contact">
+        <h2>Contact me:</h2>
+    </section>
+
+</main>
     
 </body>
 
