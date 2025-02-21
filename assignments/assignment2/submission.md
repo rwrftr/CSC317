@@ -21,16 +21,38 @@ I followed a fairly linear approach, keeping sections and elements stacked on to
 ## Code Explanation:
 Highlight key parts of your HTML code and explain their purpose. Use code blocks for clarity.
 
+### Header:
+I used comments to add information about each section. The first few lines specify to the browser how to interpret the rest of the document, stating an html document, in english, using UTF-8, and telling the browser to scale the content to the width of the screen. 
+
+The meta tags after and including the title give information to whatever is indexing the page, defining a title, description, author, icon image, and keyword tags for search engines.
+
+then theres a brief style section that applies to tables in the rest of the document, telling them to render with dividing lines between cells.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 1</title>
+    
+    <meta charset="UTF-8"> <!-- defines ascii charcters the website uses -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- tells the browser how to scale the page for devices with different aspect ratios -->
+    
+    <!-- 
+     the following meta tags specify information about the site for a search engine to index.
+     -->
+    <title>Roan Rafter - Assignment 2</title>
+    <meta name="description" content="Roan Rafter's home page">
+    <meta name="tags"        content="HTML, C++, Java, Roan Rafter">
+    <meta name="author"      content="Roan Rafter">
+    <link type="image/png" sizes="16x16" rel="icon" href="./images/Seagull-favicon.png">
+
+<!-- https://www.w3schools.com/html/html_table_borders.asp
+^ above page informed the following "style" section -->
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    </style>
 </head>
-<body>
-    <h1>Welcome to My Assignment</h1>
-    <p>This is a paragraph explaining the content.</p>
-</body>
 </html>
