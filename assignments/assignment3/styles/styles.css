@@ -115,8 +115,90 @@ body p {
 }
 
 table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
+  border-collapse: se;
   padding: 8px;
+
+  width: 100%;
+  border-spacing: 0;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
+th {
+  border: 1px solid black;
+  background-color: var(--color4);
+  color: var(--color1);
+}
+
+td {
+  border: 1px solid black;
+  background-color: var(--color2);
+  color: var(--color3);
+}
+
+article {
+  border: 1px solid black;
+  background-color: var(--color2);
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+article a{
+  color: var(--color3);
+}
+
+iframe {
+  display: none;
+  border: 1px solid black;
+  background-color: var(--color2);
+  padding: 15px;
+  border-radius: 8px;
+
+  margin: 0 auto; /* Center horizontally */
+  width: 90%; /* Set a width (adjust as needed) */
+}
+
+.Starfield-text {
+  display: flex;
+}
+
+.Asteroids-text {
+  display: flex;
+}
+.Triangle-text {
+  display: flex;
+}
+
+.social-links {
+  display: flex; 
+  padding: 15px;
+}
+
+.social-links a{
+  padding: 15px;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+form {
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 10px;
+  border-style: solid;
+  border-color: var(--color2);
+  background-color: var(--color1);
+  color: var(--color3);
+  border-radius: 30px;
+}
+
+form input {
+  padding: 10px;
+  border-style: solid;
+  border-color: var(--color5);
+  background-color: var(--color3);
+  border-radius: 30px;
+}

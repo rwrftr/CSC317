@@ -60,6 +60,20 @@
         function SetStyle2() {
             document.getElementById('pagestyle').setAttribute('href', './styles/AI-1.css');
         }
+        function SetStyle3() {
+            document.getElementById('pagestyle').setAttribute('href', './styles/AI-2.css');
+        }
+        function SetStyle4() {
+            document.getElementById('pagestyle').setAttribute('href', './styles/hybrid.css');
+        }
+
+        function toggleIframe(frameID = "AsteroidsFrame"){
+            if (document.getElementById(frameID).style.display == "none") {
+                document.getElementById(frameID).style.display = "block";
+            } else {
+                document.getElementById(frameID).style.display = "none";
+            }
+        }
     </script>
 </header>
 
@@ -92,6 +106,7 @@
             <li>Bachelor's of science in Computer Science, San Francisco State University, 2027</li>
         </ul>
     </div>
+    
         <table>
             <thead>
                 <tr>
@@ -121,18 +136,28 @@
     <section id="Projects">
         <h2>Projects:</h2>
         <ul>
-            <li><article>
+            <div id="Starfield-text"><li><article>
                 <a href="https://rwrftr.github.io/Starfield/" target="_blank"><h3>Starfield Project</h3></a>
+                <button onclick="toggleIframe('StarfieldFrame')"> Toggle Iframe </button>
                 <p>Interactive visual with motion of planets and stars. Left click to speed up, right click to slow down</p>
+            </div>
+                <iframe id="StarfieldFrame" src="https://rwrftr.github.io/Starfield/" frameborder="0" width="1280" height="720"></iframe>
             </article></li>
-            <li><article>
-                <a href="https://rwrftr.github.io/AsteroidsGame/" target="_blank"><h3>Asteroids</h3></a>
+            
+            <div id="Asteroids-text"><li><article>
+                <a href="https://rwrftr.github.io/AsteroidsGame/" target="_blank"><h3>Asteroids</h3></a> 
+                <button onclick="toggleIframe('AsteroidsFrame')"> Toggle Iframe </button>
                 <p>In-browser playable version of asteroids, using vectors</p>
-                <iframe src="https://rwrftr.github.io/AsteroidsGame/" frameborder="0" width="1280" height="720"></iframe>
+            </div>
+                <iframe id="AsteroidsFrame" src="https://rwrftr.github.io/AsteroidsGame/" frameborder="0" width="1280" height="720"></iframe>
             </article></li>
-            <li><article>
+
+            <div id="Triange-text"><li><article>
                 <a href="https://rwrftr.github.io/SierpinskiTriangle/" target="_blank"><h3>Sierpinski Triangle</h3></a>
+                <button onclick="toggleIframe('TraingleFrame')"> Toggle Iframe </button>
                 <p>movable drawing of a Sierpinski triangle, </p>
+            </div>
+                <iframe id="TraingleFrame" src="https://rwrftr.github.io/SierpinskiTriangle/" frameborder="0" width="1280" height="720"></iframe>
             </article></li>
         </ul>
     </section>
@@ -143,13 +168,9 @@
 <footer>
     <section id="Contact">
         <h2>Contact me:</h2>
-        <a 
-            href="https://www.linkedin.com/in/roan-rafter-a71b83263" 
-            target="_blank" 
-            style="display: inline-block; padding: 10px 20px; background: #0072b1; color: aliceblue;">
-            LinkedIn 
-            <img src="./images/linkedin.png" alt="A small icon, of the linkedin logo" width="15">
-        </a>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/roan-rafter-a71b83263" target="_blank" style=" background: #0072b1; color: aliceblue;"> LinkedIn </a>
+        </div>
         
         <br><br>
         
