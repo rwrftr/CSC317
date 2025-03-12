@@ -1,0 +1,209 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Easy-to-read font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background for crow-like mood */
+    color: #e0e0e0; /* Light text for contrast */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333; /* Dark gray for the nav bar */
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #e0e0e0; /* Light text for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Gold color for hover effect */
+}
+
+/* Header/Intro Section */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #262626; /* Slightly lighter dark background */
+}
+
+header img {
+    border-radius: 50%; /* Circular profile image */
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+    color: #ffcc00; /* Gold color for the name */
+}
+
+header h2 {
+    font-size: 1.2em;
+    color: #b3b3b3; /* Light gray for the subtitle */
+}
+
+/* About Me Section */
+#about {
+    padding: 20px;
+    background-color: #262626; /* Consistent with header */
+    margin: 20px 0;
+}
+
+#about h2 {
+    color: #ffcc00; /* Gold color for section headings */
+}
+
+/* Education Section */
+#Education {
+    padding: 20px;
+    background-color: #262626;
+    margin: 20px 0;
+}
+
+#Education h2 {
+    color: #ffcc00;
+}
+
+#Education table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+#Education th, #Education td {
+    border: 1px solid #444; /* Darker border for table */
+    padding: 8px;
+    text-align: left;
+}
+
+#Education th {
+    background-color: #333; /* Dark gray for table headers */
+    color: #e0e0e0;
+}
+
+/* Projects Section */
+#Projects {
+    padding: 20px;
+    background-color: #262626;
+    margin: 20px 0;
+}
+
+#Projects h2 {
+    color: #ffcc00;
+}
+
+#Projects article {
+    margin-bottom: 20px;
+}
+
+#Projects a {
+    color: #ffcc00; /* Gold color for project links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#Projects a:hover {
+    color: #e0e0e0; /* Light text on hover */
+}
+
+/* Contact Form Section */
+#Contact {
+    padding: 20px;
+    background-color: #262626;
+    margin: 20px 0;
+}
+
+#Contact h2 {
+    color: #ffcc00;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm label {
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+#contactForm input {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+#contactForm input[type="button"] {
+    background-color: #ffcc00; /* Gold color for submit button */
+    color: #1a1a1a;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm input[type="button"]:hover {
+    background-color: #e0e0e0; /* Light text on hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #e0e0e0;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ffcc00; /* Gold color for footer links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e0e0e0; /* Light text on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header h2 {
+        font-size: 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #contactForm input {
+        width: 100%;
+    }
+}

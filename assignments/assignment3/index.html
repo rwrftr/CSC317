@@ -10,10 +10,21 @@
     <meta name="author"      content="Roan Rafter">
     <link type="image/png" sizes="16x16" rel="icon" href="./images/Seagull-favicon.png">
 
+     <!-- want to use this fun font i saw in a youtube video, so I went to the website
+         and it told me to paste the following into the head of my html doc -->
+
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+     
+
+    <link rel="stylesheet" href="./styles/handwritten.css"> 
+
     <!-- Social media tags -->
 
     <meta name="og:title" content="Roan Rafter - Assignment 2">
 
+   
 
 <!-- https://www.w3schools.com/html/html_table_borders.asp
 ^ above page informed the following "style" section -->
@@ -28,29 +39,17 @@
 
 <body>
 
-<!-- as per this stackoverflow thread: 
-https://stackoverflow.com/questions/17219757/how-to-place-text-and-an-image-next-to-each-other-in-html
-    
-I want to place my profile image to the left of my name and have my name and short blurb aligned on 
-the right side of the image, left justified. So, I will add 'style="float:left"' to the image,
-and then, on the next element (in this case it would be the <nav> tag) I'll add 'style="clear: both"'
-so that the elements that come after don't bring themselves up and look all messy.
-
-I also added "margin-right" to the image, so that the text is spaced a little bit.
--->
-
 <header>
-<div>
-    <img src="./images/profile.jpeg" alt="A picture of me, Roan Rafter!" width="300" x">
-    <h1>Roan Rafter</h1>
-    <h2 style = "color: darkgray;"> San Francisco native, <br> studying Computer Science at SF State</h2>
+    <div class="header-content">
+        <img src="./images/profile.jpeg" alt="A picture of me, Roan Rafter!" width="300">
+        
+        <div class="header-text">
+            <h1>Roan Rafter</h1>
+            <h2> San Francisco native, <br> studying Computer Science at SF State</h2>
+        </div> 
+    </div>
 
-    <!--
-        for some reason, the "margin-left" attribute does not seem to push the bullet points over
-        EXCEPT in the iframe, where the bullet points DO move... 
-    -->
-
-    <nav style="margin-left: 20px;">
+    <nav>
         <ul>
             <li><a href="#about">About me</a></li>
             <!-- li><a href="#Skills">Skills</a></li -->
@@ -59,32 +58,31 @@ I also added "margin-right" to the image, so that the text is spaced a little bi
             <li><a href="#Contact">Contact Me!</a></li>
         </ul>
     </nav>
-    
-</div>
 </header>
 
-<main style="clear: both;">
+    <main style="clear: both;">
+    <div class="about-me">
+        <section id="about">
+            <h2 style="text-align:center;">About me:</h2>
+            <p>
+                I'm Roan, a computer science major at SF state, graduating in 2027! I work at golden boy pizza,
+                and love to explore the city in my free time. I graduated from Lowell high school in 2023, and made 
+                a few cool demonstrations of the java I learned, check them out below this!
+            </p>
+        </section>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Standing-spinning-cat-ubrw30x0hyi4v9oh.gif" alt = "spinning cat" width="300">
-    <iframe src="index.html" frameborder="0" height="300" width="800" title="an iframe containing the website you are currently on"></iframe>
-
-    <section id="about">
-        <h2>About me:</h2>
-        <p>
-            I'm Roan, a computer science major at SF state, graduating in 2027! I work at golden boy pizza,
-            and love to explore the city in my free time. I graduated from Lowell high school in 2023, and made 
-            a few cool demonstrations of the java I learned, check them out below this!
-        </p>
-    </section>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Standing-spinning-cat-ubrw30x0hyi4v9oh.gif" alt = "spinning cat" width="300">
+    </div>
 
     <section id="Education">
+       <div class="Education-Degrees">
         <h2>Education:</h2>
         <h3>Degrees:</h3>
         <ul>
             <li>Lowell High school, 2023</li>
             <li>Bachelor's of science in Computer Science, San Francisco State University, 2027</li>
         </ul>
-
+    </div>
         <table>
             <thead>
                 <tr>

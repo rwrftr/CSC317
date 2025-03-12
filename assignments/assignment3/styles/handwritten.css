@@ -1,0 +1,121 @@
+:root {
+    --color1: #3F0D12;
+    --color2: #A71D31;
+    --color3: #F1F0CC;
+    --color4: #D5BF86;
+    --color5: #8D775F;
+}
+
+.header-content{
+    display: flex;
+}
+
+.header-text{
+  padding-left: 10px;
+  font-size: 200%;
+}
+
+.header-text h2 {
+  color: var(--color3);
+}
+
+nav ul{
+  padding: 15px;
+  display: flex;
+  list-style: none;
+  justify-content:center;
+  background-color: var(--color4);
+}
+
+nav ul li{
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 10px;
+  border-style: solid;
+  border-color: var(--color5);
+  background-color: var(--color3);
+  border-radius: 30px;
+}
+
+@keyframes nav-bar-spin {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate((360*0.1)deg); }
+  20% { transform: rotate((360*0.2)deg); }
+  30% { transform: rotate((360*0.3)deg); }
+  40% { transform: rotate((360*0.4)deg); }
+  50% { transform: rotate((360*0.5)deg); }
+  60% { transform: rotate((360*0.6)deg); }
+  70% { transform: rotate((360*0.7)deg); }
+  80% { transform: rotate((360*0.8)deg); }
+  90% { transform: rotate((360*0.9)deg); }
+  100% { transform: rotate(360deg); }
+}
+
+nav ul li:hover{
+  animation-name: nav-bar-spin;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+body {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: var( --color5);
+  color: var(--color1);
+}
+
+body p {
+  color: var(--color3);
+}
+
+/* ABOUT-ME */
+  .about-me {
+    display:flex;
+    
+  }
+
+  .about-me h2 {
+    text-align: center;
+    font-size: 250%;
+    margin-bottom: -10px;
+
+  }
+
+  .about-me p {
+    font-size: 150%;
+    padding:10px;
+    margin-right: 10px;
+    background-color: var(--color2);
+    border-style:dotted;
+    border-color: var(--color1);
+    border-radius: 30px;
+  }
+
+.Education-Degrees {
+  display: flex;
+}
+/*
+
+li a{
+  padding: 5px;
+  background-color: var(--color3);
+  color: var(--color1);
+  transition: transform 0.3s ease;
+  animation: pluse 2s infinite;
+}
+
+li a:hover { 
+  transform: scale(10, 10);
+  color: var(--color2);
+  font-weight: bold;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  
+}
+
+img:hover {
+  filter: grayscale(100%);
+}
+*/
