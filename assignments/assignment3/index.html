@@ -15,26 +15,13 @@
 
          <link rel="preconnect" href="https://fonts.googleapis.com">
          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-         <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-     
+         <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
 
-    <link rel="stylesheet" href="./styles/handwritten.css"> 
+    <link rel="stylesheet" href="./styles/styles.css" id="pagestyle"> 
 
     <!-- Social media tags -->
 
     <meta name="og:title" content="Roan Rafter - Assignment 2">
-
-   
-
-<!-- https://www.w3schools.com/html/html_table_borders.asp
-^ above page informed the following "style" section -->
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 8px;
-        }
-    </style>
 </head>
 
 <body>
@@ -45,7 +32,7 @@
         
         <div class="header-text">
             <h1>Roan Rafter</h1>
-            <h2> San Francisco native, <br> studying Computer Science at SF State</h2>
+            <p> San Francisco native, <br> studying Computer Science at SF State</p>
         </div> 
     </div>
 
@@ -58,6 +45,22 @@
             <li><a href="#Contact">Contact Me!</a></li>
         </ul>
     </nav>
+
+    <div class="switcher">
+        <button onclick="SetStyle1()">Default Style</button>
+        <button onclick="SetStyle2()">AI-1 Style</button>
+        <button onclick="SetStyle3()">AI-2 Style</button>
+        <button onclick="SetStyle4()">Hybrid Style</button>
+    </div>
+
+    <script>
+        function SetStyle1() {
+            document.getElementById('pagestyle').setAttribute('href', './styles/styles.css');
+        }
+        function SetStyle2() {
+            document.getElementById('pagestyle').setAttribute('href', './styles/AI-1.css');
+        }
+    </script>
 </header>
 
     <main style="clear: both;">
@@ -69,14 +72,20 @@
                 and love to explore the city in my free time. I graduated from Lowell high school in 2023, and made 
                 a few cool demonstrations of the java I learned, check them out below this!
             </p>
+            <p>
+                I'm Roan, a computer science major at SF state, graduating in 2027! I work at golden boy pizza,
+                and love to explore the city in my free time. I graduated from Lowell high school in 2023, and made 
+                a few cool demonstrations of the java I learned, check them out below this!
+            </p>
         </section>
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Standing-spinning-cat-ubrw30x0hyi4v9oh.gif" alt = "spinning cat" width="300">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Standing-spinning-cat-ubrw30x0hyi4v9oh.gif" alt = "spinning cat" width="500">
     </div>
 
     <section id="Education">
-       <div class="Education-Degrees">
-        <h2>Education:</h2>
+      
+        <div class="Education-Header"><h2>Education:</h2></div>
+        <div class="Education-Degrees">
         <h3>Degrees:</h3>
         <ul>
             <li>Lowell High school, 2023</li>
