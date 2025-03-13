@@ -1,58 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Roan Rafter - Assignment 2</title>
+<!-- website info-->
+    <title>Roan Rafter - Assignment 3</title>
     <meta name="description" content="Roan Rafter's home page">
     <meta name="tags"        content="HTML, C++, Java, Roan Rafter">
     <meta name="author"      content="Roan Rafter">
     <link type="image/png" sizes="16x16" rel="icon" href="./images/Seagull-favicon.png">
-    
-     <!-- want to use this fun font i saw in a youtube video, so I went to the website
-         and it told me to paste the following into the head of my html doc -->
-
-         <link rel="preconnect" href="https://fonts.googleapis.com">
-         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-         <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
-
     <link rel="stylesheet" href="./styles/styles.css" id="pagestyle"> 
 
-    <!-- Social media tags -->
+<!-- want to use this fun font i saw in a youtube video, so I went to the website
+    and it told me to paste the following into the head of my html doc -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
 
-    <meta name="og:title" content="Roan Rafter - Assignment 2">
-</head>
+<!-- Social media tags -->
+    <meta name="og:title" content="Roan Rafter - Assignment 3">
 
-<body>
-
-<header>
-    <div class="header-content">
-        <img src="./images/profile.jpeg" alt="A picture of me, Roan Rafter!" width="300">
-        
-        <div class="header-text">
-            <h1>Roan Rafter</h1>
-            <p> San Francisco native, <br> studying Computer Science at SF State</p>
-        </div> 
-    </div>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About me</a></li>
-            <!-- li><a href="#Skills">Skills</a></li -->
-            <li><a href="#Education">Education</a></li>
-            <li><a href="#Projects">Projects</a></li>
-            <li><a href="#Contact">Contact Me!</a></li>
-        </ul>
-    </nav>
-
-    <div class="switcher">
-        <button onclick="SetStyle1()">Default Style</button>
-        <button onclick="SetStyle2()">AI-1 Style</button>
-        <button onclick="SetStyle3()">AI-2 Style</button>
-        <button onclick="SetStyle4()">Hybrid Style</button>
-    </div>
-
+<!-- Javascript Functions-->
     <script>
         function SetStyle1() {
             document.getElementById('pagestyle').setAttribute('href', './styles/styles.css');
@@ -76,9 +46,43 @@
         }
 
     </script>
-</header>
 
-    <main style="clear: both;">
+</head>
+
+<body>
+<!-- header: Image, Name, and Blurb-->
+    <header>
+        <div class="header-content">
+            <img src="./images/profile.jpeg" alt="A picture of me, Roan Rafter!" width="300">
+            
+            <div class="header-text">
+                <h1>Roan Rafter</h1>
+                <p> San Francisco native, <br> studying Computer Science at SF State</p>
+            </div> 
+        </div>
+
+
+    </header>
+<!-- Navigation menu -->
+    <nav>
+        <ul>
+            <li><a href="#about">About me</a></li>
+            <!-- li><a href="#Skills">Skills</a></li -->
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contact">Contact Me!</a></li>
+        </ul>
+    </nav>
+
+<!-- Theme Switcher -->
+    <div class="switcher">
+        <button onclick="SetStyle1()">Default Style</button>
+        <button onclick="SetStyle2()">AI-1 Style</button>
+        <button onclick="SetStyle3()">AI-2 Style</button>
+        <button onclick="SetStyle4()">Hybrid Style</button>
+    </div>
+
+<!-- About me -->
     <div class="about-me">
         <section id="about">
             <h2 style="text-align:center;">About me:</h2>
@@ -97,6 +101,7 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Standing-spinning-cat-ubrw30x0hyi4v9oh.gif" alt = "spinning cat" width="500">
     </div>
 
+<!-- Education -->
     <section id="Education">
       
         <div class="Education-Header"><h2>Education:</h2></div>
@@ -133,7 +138,8 @@
             </tr>
         </table>
     </section>
-    
+
+<!-- Projects -->
     <section id="Projects">
         <h2>Projects:</h2>
         <ul>
@@ -162,19 +168,19 @@
             </article></li>
         </ul>
     </section>
-
-</main>
     
 </body>
+
 <footer>
+<!-- Contact Info -->
     <section id="Contact">
         <h2>Contact me:</h2>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/roan-rafter-a71b83263" target="_blank" style=" background: #0072b1; color: aliceblue;"> LinkedIn </a>
         </div>
-        
         <br><br>
-        
+
+     <!-- Contact Form-->      
         <form id="contactForm">
             <label>Name</label>
             <input type="text" placeholder="Enter your name here" name="Name:" required>
@@ -191,17 +197,20 @@
             <label>Submit</label>
             <input type="button" name="Submit" value="x">
         </form>
-    </section>    
+    </section>
+<!-- Ribbit -->    
     <audio controls>
         <source src="Ribbit.ogg">
     </audio>
 
     <br>
 
+<!-- Attribution -->
     <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a>
     <br>
     <a href="https://freesound.org/people/egomassive/sounds/536759/">Frog.ogg</a> by <a href="https://freesound.org/people/egomassive/">egomassive</a> | License: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons 0</a>
     <br>
     <a target="_blank" href="https://icons8.com/icon/MN4zNxgAPojy/seagull">Seagull</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 </footer>
+
 </html>

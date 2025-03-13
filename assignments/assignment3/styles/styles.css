@@ -6,6 +6,12 @@
     --color5: #8D775F;
 }
 
+/* Header: I wanted to have the image on the left half, with the text on the right but 
+    leaned up against the image. I wanted the text on the right half to be on top of 
+    each other (I added a <br>) and centered vertically, with the first line, my name, being larger, bolder,
+    and a different color. 
+*/
+
 .header-content{
     display: flex;
 }
@@ -24,6 +30,10 @@ h2 {
   text-align: center;
   font-size: 250%;
 }
+
+/* Navigation Menu: 
+
+*/
 
 nav ul{
   padding: 15px;
@@ -82,6 +92,10 @@ nav ul li a:visited {
   color: var(--color1);
 }
 
+/* Body text: 
+
+*/
+
 body {
   font-family: "Atkinson Hyperlegible", sans-serif;
   font-weight: 400;
@@ -94,7 +108,10 @@ body p {
   color: var(--color3);
 }
 
-/* ABOUT-ME */
+/* About Me:
+
+*/
+
   .about-me {
     display:flex;
   }
@@ -109,6 +126,9 @@ body p {
     border-radius: 30px;
   }
 
+/* Education: 
+
+*/
 
 .Education-Degrees {
   display: flex;
