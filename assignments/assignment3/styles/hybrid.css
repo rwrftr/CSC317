@@ -1,0 +1,315 @@
+:root {
+    --color1: #3F0D12;
+    --color2: #A71D31;
+    --color3: #F1F0CC;
+    --color4: #D5BF86;
+    --color5: #8D775F;
+}
+
+/* I put the body section first, like the AI had done, and I added a 
+   background image to set the mood! However, now the text is unreadable so I'm going
+   to give like every piece of text a box so it can be read
+
+*/
+
+body {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/c/ca/Interior_of_ETI_%28%C5%A0koda%29_14TrSF_bus_number_5538.JPG') no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+  color: var(--color1);
+}
+
+h2 {
+  color: var(--color1);
+  text-align: center;
+  font-size: 250%;
+  padding: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 10px;
+  border-color: var(--color5);
+  background-color: var(--color4);
+}
+
+h1 {
+    padding: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: var(--color5);
+    background-color: var(--color4);
+
+}
+
+body p {
+    color: var(--color3);
+  }
+  
+.header-content{
+    display: flex;
+}
+
+.header-text{
+  padding: 20px;
+  font-size: 200%;
+
+}
+
+.header-text p{
+  font-size: 150%;
+  color: var(--color2);
+  padding: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 10px;
+  border-color: var(--color5);
+  background-color: var(--color4);
+}
+
+
+
+/* Navigation Menu: I didn't change much here except for animations
+*/
+
+nav ul{
+  padding: 15px;
+  display: flex;
+  list-style: none;
+  justify-content:center;
+  background-color: var(--color4);
+}
+
+nav ul li{
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 10px;
+  border-style: solid;
+  border-color: var(--color5);
+  background-color: var(--color3);
+  border-radius: 30px;
+}
+
+@keyframes nav-bar-spin {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate((360*0.1)deg); }
+  20% { transform: rotate((360*0.2)deg); }
+  30% { transform: rotate((360*0.3)deg); }
+  40% { transform: rotate((360*0.4)deg); }
+  50% { transform: rotate((360*0.5)deg); }
+  60% { transform: rotate((360*0.6)deg); }
+  70% { transform: rotate((360*0.7)deg); }
+  80% { transform: rotate((360*0.8)deg); }
+  90% { transform: rotate((360*0.9)deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes nav-bar-pulse {
+  0% { transform: scale(1); rotate: 0deg;}
+  25% {rotate: 20deg;}
+  50% { transform: scale(1.2); rotate: 0deg;}
+  75% {rotate: -20deg;}
+  100% { transform: scale(1); rotate: 0deg;}
+}
+
+nav ul li:hover{
+  animation-name: nav-bar-pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--color1);
+  font-size: 150%;
+}
+
+nav ul li a:visited {
+  text-decoration: none;
+  color: var(--color1);
+}
+
+.switcher {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  gap: 10px;
+}
+
+.switcher button {
+  color: var(--color3);
+  background-color: var(--color2);
+  border: 2px solid var(--color1);
+  border-radius: 8px;
+  font-size: 150%;
+}
+
+/* Body text: I really like this font, as it is so easy to read and, minimally styled as to not get
+              annoying after looking at it for a while. I then picked a color for the background of 
+              the site, as well as the heading text and paragraph text. 
+*/
+
+
+
+
+/* About Me: I wanted to have this section be a mirror of the header, with the image on the right and 
+             the text on the left. I did this, and realized that the text was not long enough to look 
+             good next to the image, so I added another text box and really liked the look of the double
+             boxes. Perhaps I could have done more to beautif
+*/
+
+  .about-me {
+    display:flex;
+  }
+
+  .about-me p {
+    font-size: 150%;
+    padding:10px;
+    margin-right: 10px;
+    background-color: var(--color2);
+    border-style:dotted;
+    border-color: var(--color1);
+    border-radius: 30px;
+  }
+
+  img {
+    border: 10px solid var(--color2);
+    border-radius: 30px;
+  }
+
+/* Education: For this section, what I really wanted, was for the table head to appear 
+              detatched from the rest of the table, and for the outer edges of the table
+              to be rounded but not the inner ones, except where the table head intersects 
+              with the table, where the corners should be rounded. I didn't end up being able
+              to prevent the inner corners from being rounded, and I think in order to split
+              the head from the rest of the table i would need to just make it a separate 
+              table in the HTML file, and then style it accordingly which I didn't want to do
+
+              for the degrees part, I knew I wanted to keep it a list and I wanted to keep it visually
+              unimportant since it has literally two lines of text. I feel it ends up looking a little 
+              unpolished, with the text having no decoration and lots of negative space on the right side,
+              but I think if the list were longer, it would have come out looking better. I also was not able
+              to center the "degrees" text vertically compared to the bulletted list, which I don't like.
+*/
+
+.Education-Degrees {
+  display: flex;
+}
+
+table, th, td {
+  border-collapse: se;
+  padding: 8px;
+
+  width: 100%;
+  border-spacing: 0;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+th {
+  border: 1px solid black;
+  background-color: var(--color4);
+  color: var(--color1);
+}
+
+td {
+  border: 1px solid black;
+  background-color: var(--color2);
+  color: var(--color3);
+}
+
+/* Projects: This section took me a while, as I wanted the borders around the project name and description
+             to expand when the iframe was expanded, and I just couldn't make it happen. I would have needed
+             to add another argument to my javascript, and my HTML for that section was already very hard to
+             look at, so I felt it was better to simply give the iframes their own borders, that would of course
+             only appear when they were rendered visible.
+
+*/
+article {
+  border: 1px solid black;
+  background-color: var(--color2);
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+article a{
+  color: var(--color3);
+}
+
+iframe {
+  display: none;
+  border: 1px solid black;
+  background-color: var(--color2);
+  padding: 15px;
+  border-radius: 8px;
+
+  margin: 0 auto; /* Center horizontally */
+  width: 90%; /* Set a width (adjust as needed) */
+}
+
+.Starfield-text {
+  display: flex;
+}
+
+.Asteroids-text {
+  display: flex;
+}
+.Triangle-text {
+  display: flex;
+}
+
+/* Contact: For this section, I wanted my form to be contained in its own border with a background 
+            and everything, and I wanted to have the buttons be centered next to each other. I spent
+            a lot of time trying to get these buttons centered. Its probably something to do with one
+            og them being an <a> element, amd one of them being <button>, but it stumped me. I did not 
+            end up styling the attributions, because I genuinely like them as a left-justified stacked 
+            list with visible hyperlinks. Maybe I could have added a border and background to them, but 
+            I have a lot of boxes like that around my website and I like the look of the footer being 
+            just plaintext. It feels like it adds a level of credibility like having some links and credits
+            at the bottom. Idk. 
+*/
+
+.social-links {
+  display: flex; 
+  padding: 15px;
+  align-items: center;
+  text-align: center;
+}
+
+.social-links a{
+  padding: 15px;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.social-links button{
+  padding: 15px;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+form {
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 10px;
+  border-style: solid;
+  border-color: var(--color2);
+  background-color: var(--color1);
+  color: var(--color3);
+  border-radius: 30px;
+}
+
+form input {
+  padding: 10px;
+  border-style: solid;
+  border-color: var(--color5);
+  background-color: var(--color3);
+  border-radius: 30px;
+}

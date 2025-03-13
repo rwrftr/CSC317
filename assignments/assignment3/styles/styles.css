@@ -259,6 +259,7 @@ iframe {
   display: flex; 
   padding: 15px;
   align-items: center;
+  text-align: center;
 }
 
 .social-links a{
