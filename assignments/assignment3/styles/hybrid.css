@@ -1,9 +1,9 @@
 :root {
-    --color1: #3F0D12;
-    --color2: #A71D31;
-    --color3: #F1F0CC;
-    --color4: #D5BF86;
-    --color5: #8D775F;
+    --color1: #d02e12;
+    --color2: #d67415;
+    --color3: #efe9e2;
+    --color4: #a3a6ab;
+    --color5: #1e1a19;
 }
 
 /* I put the body section first, like the AI had done, and I added a 
@@ -60,7 +60,7 @@ body p {
 
 .header-text p{
   font-size: 150%;
-  color: var(--color2);
+  color: var(--color5);
   padding: 10px;
   border-style: solid;
   border-width: 3px;
