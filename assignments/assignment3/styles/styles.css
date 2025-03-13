@@ -8,8 +8,8 @@
 
 /* Header: I wanted to have the image on the left half, with the text on the right but 
     leaned up against the image. I wanted the text on the right half to be on top of 
-    each other (I added a <br>) and centered vertically, with the first line, my name, being larger, bolder,
-    and a different color. 
+    each other (I added a <br>) and centered vertically, with the first line, my name, 
+    being larger, bolder,and a different color. 
 */
 
 .header-content{
@@ -31,8 +31,17 @@ h2 {
   font-size: 250%;
 }
 
-/* Navigation Menu: 
+/* Navigation Menu: I wanted a horizontal bar of color, with buttons in the middle,
+  and I wanted to animate the buttons. I initially wanted them to kind of increase in size 
+  and shake, but I ended up having them get bigger and smaller while they shake. I also
+  did not want them to appear like hyperlinks, or like you were clicking the text. On my
+  first try at the animation, I just made them spin when hovered, but since the text roatates 
+  and the animation occurs while the cursor hovers over the text and not the whole box, it would 
+  frequently jolt back to the default position because the rotation would cause the text to no 
+  longer be underneath the cursor, so I switched to the shaking to indicate focus and reactivity.
 
+  I wanted the switcher to be pretty basic, just some buttons. I think what I ended up doing kind of 
+  introduces clutter, and makes it difficult for your eye to decide where to go first, but I still like it.
 */
 
 nav ul{
@@ -85,6 +94,7 @@ nav ul li:hover{
 nav ul li a {
   text-decoration: none;
   color: var(--color1);
+  font-size: 150%;
 }
 
 nav ul li a:visited {
@@ -92,8 +102,24 @@ nav ul li a:visited {
   color: var(--color1);
 }
 
-/* Body text: 
+.switcher {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  gap: 10px;
+}
 
+.switcher button {
+  color: var(--color3);
+  background-color: var(--color2);
+  border: 2px solid var(--color1);
+  border-radius: 8px;
+  font-size: 150%;
+}
+
+/* Body text: I really like this font, as it is so easy to read and, minimally styled as to not get
+              annoying after looking at it for a while. I then picked a color for the background of 
+              the site, as well as the heading text and paragraph text. 
 */
 
 body {
@@ -108,8 +134,10 @@ body p {
   color: var(--color3);
 }
 
-/* About Me:
-
+/* About Me: I wanted to have this section be a mirror of the header, with the image on the right and 
+             the text on the left. I did this, and realized that the text was not long enough to look 
+             good next to the image, so I added another text box and really liked the look of the double
+             boxes. Perhaps I could have done more to beautif
 */
 
   .about-me {
@@ -126,8 +154,24 @@ body p {
     border-radius: 30px;
   }
 
-/* Education: 
+  img {
+    border: 10px solid var(--color2);
+    border-radius: 30px;
+  }
 
+/* Education: For this section, what I really wanted, was for the table head to appear 
+              detatched from the rest of the table, and for the outer edges of the table
+              to be rounded but not the inner ones, except where the table head intersects 
+              with the table, where the corners should be rounded. I didn't end up being able
+              to prevent the inner corners from being rounded, and I think in order to split
+              the head from the rest of the table i would need to just make it a separate 
+              table in the HTML file, and then style it accordingly which I didn't want to do
+
+              for the degrees part, I knew I wanted to keep it a list and I wanted to keep it visually
+              unimportant since it has literally two lines of text. I feel it ends up looking a little 
+              unpolished, with the text having no decoration and lots of negative space on the right side,
+              but I think if the list were longer, it would have come out looking better. I also was not able
+              to center the "degrees" text vertically compared to the bulletted list, which I don't like.
 */
 
 .Education-Degrees {
@@ -156,6 +200,13 @@ td {
   color: var(--color3);
 }
 
+/* Projects: This section took me a while, as I wanted the borders around the project name and description
+             to expand when the iframe was expanded, and I just couldn't make it happen. I would have needed
+             to add another argument to my javascript, and my HTML for that section was already very hard to
+             look at, so I felt it was better to simply give the iframes their own borders, that would of course
+             only appear when they were rendered visible.
+
+*/
 article {
   border: 1px solid black;
   background-color: var(--color2);
@@ -193,12 +244,30 @@ iframe {
   display: flex;
 }
 
+/* Contact: For this section, I wanted my form to be contained in its own border with a background 
+            and everything, and I wanted to have the buttons be centered next to each other. I spent
+            a lot of time trying to get these buttons centered. Its probably something to do with one
+            og them being an <a> element, amd one of them being <button>, but it stumped me. I did not 
+            end up styling the attributions, because I genuinely like them as a left-justified stacked 
+            list with visible hyperlinks. Maybe I could have added a border and background to them, but 
+            I have a lot of boxes like that around my website and I like the look of the footer being 
+            just plaintext. It feels like it adds a level of credibility like having some links and credits
+            at the bottom. Idk. 
+*/
+
 .social-links {
   display: flex; 
   padding: 15px;
+  align-items: center;
 }
 
 .social-links a{
+  padding: 15px;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.social-links button{
   padding: 15px;
   border-radius: 8px;
   margin: 0 auto;
