@@ -12,7 +12,6 @@
   display: flex;
   justify-content: center;
   margin: auto;
-  width: 70%;
   
   background-color: var(--liver);
   border-style: solid;
@@ -27,7 +26,6 @@
   display: flex;
   margin: auto;
   justify-content: center;
-  width: 70%;
   height: 80px;
   
   background-color: var(--vanilla);
@@ -39,7 +37,6 @@
 .buttons {
   display: grid;
   margin: auto;
-  width: 69%;
   background-color: var(--buff);
   padding: 10px;  
   border-style:solid;
@@ -71,3 +68,12 @@
    transform: translateY(-3px);
 }
 
+.calculator-container {
+  background-color: gray;
+  width:80%;
+  margin:auto;
+  padding: 20px;
+  
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

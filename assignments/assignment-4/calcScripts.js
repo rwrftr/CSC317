@@ -23,14 +23,14 @@ const resultTextElement = document.getElementById("resultID"); // make a var for
 console.log(resultTextElement.textContent);
 
 function addChar(newChar) {
-  if (checkCompliance(newChar)){
+  if(checkCompliance(newChar)){
     resultString = resultString + newChar;
     setText();
   }
 }
 
 function checkCompliance(newChar){
-  return true; // just for now
+  return true;
 }
 
 function setText() {
@@ -42,6 +42,8 @@ function clearString() {
   resultString = '';
   setText();
 }
+
+
 
 /*function eval(opString = resultString){
   let firstOperator = opString.indexOf(' ') + 1;
