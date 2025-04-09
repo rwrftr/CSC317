@@ -30,7 +30,12 @@ function addChar(newChar) {
 }
 
 function checkCompliance(newChar){
+  const opArray = ['.', '+', '-', '*', '%'];
+  if ((newChar.length == 3) && (opArray.includes(resultString.charAt((resultString.length) - 2)))){
+    return false;
+  } 
   return true;
+  
 }
 
 function setText() {
