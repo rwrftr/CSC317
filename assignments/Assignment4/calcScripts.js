@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-<script>
 // let message = age >= 18 ? 'Adult' : 'Minor';
 
 // const city = user.profile?
@@ -34,7 +30,7 @@ function addChar(newChar) {
 }
 
 function checkCompliance(newChar){
-  
+  return true; // just for now
 }
 
 function setText() {
@@ -56,6 +52,3 @@ function clearString() {
   
   let firstTerm = resultString.substring(0, firstOperator - 1);
 }*/
-</script>
-</body>
-</html>
