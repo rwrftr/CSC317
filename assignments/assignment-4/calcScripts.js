@@ -1,11 +1,11 @@
 let resultString = "";
+const opArray = ['.', '+', '-', '*', '%', '/'];
+const numArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
 const resultTextElement = document.getElementById("resultID"); // make a var for the 'result' text box
 console.log(resultTextElement.textContent);
 
 document.addEventListener('keyup', (event) => {
-  const opArray = ['.', '+', '-', '*', '%'];
-  const numArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  
   if(event.key === "Enter"){
     resultString = eval(resultString); 
     setText();
@@ -30,7 +30,6 @@ function addChar(newChar) {
 }
 
 function checkCompliance(newChar){
-  const opArray = ['.', '+', '-', '*', '%'];
 
   if ((newChar.length == 3) && (opArray.includes(resultString.charAt((resultString.length) - 2)))){
     return false;
@@ -44,7 +43,7 @@ function setText() {
   console.log(" ResultString passed in with type: " + typeof resultString);
   console.log(" ResultString passed in with value: " + resultString + '\n');
   
-  if(typeof resultString === 'number'){
+  if(typeof resultString != 'string'){
     console.log("Since number, attempting to change type...")
     resultString = '' + resultString;
     console.log(" ResultString is of type: " + typeof resultString); 
@@ -60,3 +59,21 @@ function clearString() {
   setText();
 }
 
+function flipPolarity(){
+  // if negative, remove the negative sign
+  if(resultString.charAt(0) === '-'){
+    resultString = resultString.substring(1);
+    setText();
+    return;
+  }
+  
+  // check if string is an equation
+  for (const operator of opArray){
+    if((operator != '.') && resultString.includes(operator)){return;} // if the equation has not been evaluated, do not do anything
+  }
+  
+  resultString = eval((resultString * -1));
+  setText();
+}
+
+//findPercent(){}
