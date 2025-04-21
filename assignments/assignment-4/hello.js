@@ -8,10 +8,12 @@ function printString(num, string){
     }
 }
 
-const arrowPrint = (num, string) => ({ 
-    for(let i = 0; i < num; i++){}
+const arrowPrint = (num, string) => { 
+    if(num <= 1){return string;}
+    return (string + ' ' + arrowPrint((num - 1), string));
+ };
 
- });
 
-
-printString(3,helloText);
+printString(3, helloText);
+console.log();
+arrowPrint(4, helloText)
