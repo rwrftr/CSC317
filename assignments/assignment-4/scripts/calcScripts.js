@@ -85,8 +85,13 @@ function flipPolarity(){
 function findPercent(){
   for (const operator of opArray){
     if(resultString.includes(operator)){return;} // if string has operators in it, do not eval
-    
-    resultString = eval(resultString * 0.001);
-    setText(); 
-  }
+  } 
+
+  resultString = ((parseFloat(resultString)) / 100).toString();
+  setText(); 
+}
+
+function playSound(){
+  var sound = new Audio('Ribbit.ogg');
+  sound.play();
 }

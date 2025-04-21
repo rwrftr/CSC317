@@ -16,7 +16,7 @@
                 <div class="buttons">
                   <button type="button" class="operator" onclick="clearString();">AC</button>
               
-                  <button type="button" class="operator">()</button>
+                  <button type="button" class="operator" onclick="playSound();">()</button>
               
                   <button type="button" class="operator" onclick="findPercent()">%</button>
               
@@ -32,7 +32,7 @@
               
                   <button type="button" class="number" onclick="addChar('4');">4</button>
               
-                  <button type="button" class="number" onclick="addChar('8');">5</button>
+                  <button type="button" class="number" onclick="addChar('5');">5</button>
               
                   <button type="button" class="number" onclick="addChar('6');">6</button>
               
@@ -55,6 +55,8 @@
                   <button type="button" style="background-color: var(--flame);" onclick="resultString = eval(resultString); setText();">=</button>
                 </div>
         </div>
+
+        <a href='index.html'>Go Home</a>
         <script src="./scripts/calcScripts.js"></script>
 </body>
 </html>
