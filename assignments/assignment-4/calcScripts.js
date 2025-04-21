@@ -1,26 +1,26 @@
-// let message = age >= 18 ? 'Adult' : 'Minor';
-
-// const city = user.profile?
-// const add = (x, y) => x + y;
-
-/*
-
-document.addEventListener("keydown", function(event)) {
-
-function $(id) {
-  return document.getElementById(id);
-}
-
-}
-
-
-*/
-
-
 let resultString = "";
-
 const resultTextElement = document.getElementById("resultID"); // make a var for the 'result' text box
 console.log(resultTextElement.textContent);
+
+document.addEventListener('keyup', (event) => {
+  const opArray = ['.', '+', '-', '*', '%'];
+  const numArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  
+  if(event.key === "Enter"){
+    resultString = eval(resultString); 
+    setText();
+    return;
+  }
+  
+  const newStr = event.key;
+  console.log("key pressed: " + event.key + '\n');
+
+  if(opArray.includes(newStr)){
+    addChar(' ' + newStr + ' ');
+  } 
+  
+  if(numArray.includes(newStr)){addChar(newStr);}
+});
 
 function addChar(newChar) {
   if(checkCompliance(newChar)){
@@ -31,6 +31,7 @@ function addChar(newChar) {
 
 function checkCompliance(newChar){
   const opArray = ['.', '+', '-', '*', '%'];
+
   if ((newChar.length == 3) && (opArray.includes(resultString.charAt((resultString.length) - 2)))){
     return false;
   } 
@@ -39,8 +40,19 @@ function checkCompliance(newChar){
 }
 
 function setText() {
+  console.log("=== beginning function SetText() ===");
+  console.log(" ResultString passed in with type: " + typeof resultString);
+  console.log(" ResultString passed in with value: " + resultString + '\n');
+  
+  if(typeof resultString === 'number'){
+    console.log("Since number, attempting to change type...")
+    resultString = '' + resultString;
+    console.log(" ResultString is of type: " + typeof resultString); 
+    console.log(" ResultString contains Value: " + resultString + '\n');
+  }
+
   resultTextElement.textContent = resultString;
-  console.log(resultString);
+  console.log('\n');
 }
 
 function clearString() {
@@ -48,14 +60,3 @@ function clearString() {
   setText();
 }
 
-
-
-/*function eval(opString = resultString){
-  let firstOperator = opString.indexOf(' ') + 1;
-  let secondOperator = opString.substring(firstOperator + 2).indexOf(' ')
-  if (firstOperator <= 2) { 
-    return 0;
-  } 
-  
-  let firstTerm = resultString.substring(0, firstOperator - 1);
-}*/
