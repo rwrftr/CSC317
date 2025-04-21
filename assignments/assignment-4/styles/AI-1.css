@@ -1,0 +1,255 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;700&display=swap');
+
+/* General Styles */
+body {
+    background: url('https://www.transparenttextures.com/patterns/brick-wall-dark.png'), #8b5a2b;
+    color: #f4e1c6;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header */
+header {
+    background: url('https://www.transparenttextures.com/patterns/wood-pattern.png'), #632d15;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #c99e67;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    animation: slideDown 1s ease-out;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    color: #f8d49d;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 18px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    background: #b33f00;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s;
+    animation: slideDown 1s ease-in-out;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f8d49d;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+/* About Me Section */
+.about-me {
+    text-align: center;
+    padding: 50px;
+    background: url('https://www.transparenttextures.com/patterns/wood-pattern.png'), #7a4123;
+    border-radius: 10px;
+    margin: 30px auto;
+    width: 80%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-me img {
+    border: 5px solid #f8d49d;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-me img:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+/* Education Section */
+#Education {
+    background: url('https://www.transparenttextures.com/patterns/brushed-alum.png'), #633821;
+    padding: 50px;
+    text-align: center;
+}
+
+.Education-Header h2 {
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #f8d49d;
+}
+
+th {
+    background: #b33f00;
+    color: #f4e1c6;
+}
+
+td {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Projects Section */
+#Projects {
+    text-align: center;
+    padding: 50px;
+    background: url('https://www.transparenttextures.com/patterns/brick-wall.png'), #5b2c1d;
+    color: #f8d49d;
+}
+
+#Projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#Projects article {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 60%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+#Projects article:hover {
+    transform: scale(1.05);
+}
+
+#Projects button {
+    background: #b33f00;
+    color: #f8d49d;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#Projects button:hover {
+    background: #f8d49d;
+    color: #b33f00;
+}
+
+/* Contact Section */
+#Contact {
+    text-align: center;
+    padding: 50px;
+    background: url('https://www.transparenttextures.com/patterns/wood-pattern.png'), #6d3d23;
+    color: #f8d49d;
+}
+
+form input, form button {
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #b33f00;
+    color: white;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+form input:focus {
+    outline: none;
+    background: #f8d49d;
+    color: #b33f00;
+}
+
+/* Footer */
+footer {
+    background: #632d15;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-me, #Projects article {
+        width: 90%;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    form input, form button {
+        width: 80%;
+    }
+}

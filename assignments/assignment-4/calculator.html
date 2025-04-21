@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <link rel="stylesheet" href="calculator.css">
+        <link rel="stylesheet" href="styles/calculator.css">
 </head>
 <body>
         <div class="calculator-container">
@@ -18,7 +18,7 @@
               
                   <button type="button" class="operator">()</button>
               
-                  <button type="button" class="operator" onclick="addChar(' % ');">%</button>
+                  <button type="button" class="operator" onclick="findPercent()">%</button>
               
                   <button type="button" class="operator" onclick="addChar(' / ');">/</button>
               
@@ -32,7 +32,7 @@
               
                   <button type="button" class="number" onclick="addChar('4');">4</button>
               
-                  <button type="button" class="number" onclick="addChar(8);">5</button>
+                  <button type="button" class="number" onclick="addChar('8');">5</button>
               
                   <button type="button" class="number" onclick="addChar('6');">6</button>
               
@@ -55,6 +55,6 @@
                   <button type="button" style="background-color: var(--flame);" onclick="resultString = eval(resultString); setText();">=</button>
                 </div>
         </div>
-        <script src="calcScripts.js"></script>
+        <script src="./scripts/calcScripts.js"></script>
 </body>
 </html>

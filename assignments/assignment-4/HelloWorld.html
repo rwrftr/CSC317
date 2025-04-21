@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ROAN RAFTER AWESOME HELLO WORLD SCRIPT</title>
+</head>
+<body>
+    <h1 style="text-align: center;">JavaScript Week 0 Practice</h1>
+    <button id="greetButton">Click Me!</button>
+    <input type="text" id="printText" value="Hello World!"></input>
+    <input type = "number" id="numPrints" value="1" min="1"></input>
+    <div id="output"></div>
+    
+    <script src="./scripts/hello.js"></script>
+    <script>
+        document.getElementById("greetButton").addEventListener("click", function() {
+            const textElement = document.getElementById("output");
+            const numPrints = document.getElementById("numPrints").value;
+            const printText = document.getElementById("printText").value;
+
+            textElement.textContent = (textElement.textContent + ' ' + arrowPrint(numPrints, printText));
+        });
+    </script>
+</body>
+</html>

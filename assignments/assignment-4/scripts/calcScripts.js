@@ -11,6 +11,12 @@ document.addEventListener('keyup', (event) => {
     setText();
     return;
   }
+
+  if(event.key === "Backspace"){
+    resultString = resultString.slice(0,-1)
+    setText();
+    return;
+  }
   
   const newStr = event.key;
   console.log("key pressed: " + event.key + '\n');
@@ -76,4 +82,11 @@ function flipPolarity(){
   setText();
 }
 
-//findPercent(){}
+function findPercent(){
+  for (const operator of opArray){
+    if(resultString.includes(operator)){return;} // if string has operators in it, do not eval
+    
+    resultString = eval(resultString * 0.001);
+    setText(); 
+  }
+}
