@@ -8,4 +8,10 @@ function printString(num, string){
     }
 }
 
+const arrowPrint = (num, string) => ({ 
+    for(let i = 0; i < num; i++){}
+
+ });
+
+
 printString(3,helloText);
