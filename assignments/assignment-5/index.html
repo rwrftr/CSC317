@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- website info-->
+    <title>Roan Rafter - Assignment 3</title>
+    <meta name="description" content="Roan Rafter's home page">
+    <meta name="tags"        content="HTML, C++, Java, Roan Rafter">
+    <meta name="author"      content="Roan Rafter">
+    <link type="image/png" sizes="16x16" rel="icon" href="./images/Seagull-favicon.png">
+    <link rel="stylesheet" href="./styles/styles.css" id="pagestyle"> 
+
+<!-- want to use this fun font i saw in a youtube video, so I went to the website
+    and it told me to paste the following into the head of my html doc -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
+
+<!-- Social media tags -->
+    <meta name="og:title" content="Roan Rafter - Assignment 5">
+
+<!-- Javascript Functions-->
+    <script>
+        function SetStyle1() {
+            document.getElementById('pagestyle').setAttribute('href', './styles/styles.css');
+        }
+        function SetStyle2() {
+            document.getElementById('pagestyle').setAttribute('href', './styles/AI-1.css');
+        }
+        function SetStyle3() {
+            document.getElementById('pagestyle').setAttribute('href', './styles/AI-2.css');
+        }
+        function SetStyle4() {
+            document.getElementById('pagestyle').setAttribute('href', './styles/hybrid.css');
+        }
+
+        function toggleIframe(frameID = "AsteroidsFrame"){
+            if (document.getElementById(frameID).style.display == "none") {
+                document.getElementById(frameID).style.display = "block";
+            } else {
+                document.getElementById(frameID).style.display = "none";
+            }
+        }
+
+        function playSound(){
+            var sound = new Audio('Ribbit.ogg');
+            sound.play();
+        }
+    </script>
+
+</head>
+
+<body>
+<!-- header: Image, Name, and Blurb-->
+    <header>
+        <div class="header-content">
+            <img src="./images/profile.jpeg" alt="A picture of me, Roan Rafter!" width="300">
+            
+            <div class="header-text">
+                <h1>Roan Rafter</h1>
+                <p> San Francisco native, <br> studying Computer Science at SF State</p>
+            </div> 
+        </div>
+    </header>
+<!-- Navigation menu -->
+    <nav>
+        <ul>
+            <li><a href="#about">About me</a></li>
+            <!-- li><a href="#Skills">Skills</a></li -->
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contact">Contact Me!</a></li>
+        </ul>
+    </nav>
+
+<!-- Theme Switcher -->
+    <div class="switcher">
+        <button onclick="SetStyle1()">Default Style</button>
+        <button onclick="SetStyle2()">AI-1 Style</button>
+        <button onclick="SetStyle3()">AI-2 Style</button>
+        <button onclick="SetStyle4()">Hybrid Style</button>
+    </div>
+
+<!-- About me -->
+    <div class="about-me">
+        <section id="about">
+            <h2 style="text-align:center;">About me:</h2>
+            <p>
+                I'm Roan, a computer science major at SF state, graduating in 2027! I work at golden boy pizza,
+                and love to explore the city in my free time. I graduated from Lowell high school in 2023, and made 
+                a few cool demonstrations of the java I learned, check them out below this!
+            </p>
+            <p>
+                I'm Roan, a computer science major at SF state, graduating in 2027! I work at golden boy pizza,
+                and love to explore the city in my free time. I graduated from Lowell high school in 2023, and made 
+                a few cool demonstrations of the java I learned, check them out below this!
+            </p>
+        </section>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Standing-spinning-cat-ubrw30x0hyi4v9oh.gif" alt = "spinning cat" width="500">
+    </div>
+
+<!-- Education -->
+    <section id="Education">
+      
+        <div class="Education-Header"><h2>Education:</h2></div>
+        <div class="Education-Degrees">
+        <h3>Degrees:</h3>
+        <ul>
+            <li>Lowell High school, 2023</li>
+            <li>Bachelor's of science in Computer Science, San Francisco State University, 2027</li>
+        </ul>
+    </div>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>School</th>
+                    <th>skills</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>CS110</td>
+                <td>Cal Poly Humboldt</td>
+                <td>Basic C++ functions, logic, program structure</td>
+            </tr>
+            <tr>
+                <td>CS115</td>
+                <td>Cal Poly Humboldt</td>
+                <td>Object-Oriented C++, Tester methods, multi-inheritence and polymorphism</td>
+            </tr>
+            <tr>
+                <td>CS220: Data Structures</td>
+                <td>SF State</td>
+                <td>Data container design using Java OOP</td>
+            </tr>
+        </table>
+    </section>
+
+<!-- Projects -->
+    <section id="Projects">
+        <h2>Projects:</h2>
+        <ul>
+            <div id="Recipe-text"><li><article>
+                <a href="https://github.com/rwrftr/groupJRecipeApp" target="_blank"><h3>Recipe App</h3></a>
+                <button onclick="toggleIframe('RecipeFrame')"> Toggle Iframe </button>
+                <p>Social platform centered around sharing recipes with functionality for login, posting, rating,
+                   commenting, searching, and browsing recipes.
+                </p>
+            </div>
+                <iframe id="RecipeFrame" src="https://groupjrecipeapp.onrender.com/" frameborder="0" width="1280" height="720"></iframe>
+            </article></li>
+            
+            <div id="Calculator-text"><li><article>
+                <a href="calculator.html" target="_blank"><h3>Calculator</h3></a>
+                <button onclick="toggleIframe('CalculatorFrame')"> Toggle Iframe </button>
+                <p>Usable calculator with retro coloring</p>
+            </div>
+                <iframe id="CalculatorFrame" src="calculator.html" frameborder="0" width="1280" height="720"></iframe>
+            </article></li>
+
+            <div id="Starfield-text"><li><article>
+                <a href="https://rwrftr.github.io/Starfield/" target="_blank"><h3>Starfield Project</h3></a>
+                <button onclick="toggleIframe('StarfieldFrame')"> Toggle Iframe </button>
+                <p>Interactive visual with motion of planets and stars. Left click to speed up, right click to slow down</p>
+            </div>
+                <iframe id="StarfieldFrame" src="https://rwrftr.github.io/Starfield/" frameborder="0" width="1280" height="720"></iframe>
+            </article></li>
+            
+            <div id="Asteroids-text"><li><article>
+                <a href="https://rwrftr.github.io/AsteroidsGame/" target="_blank"><h3>Asteroids</h3></a> 
+                <button onclick="toggleIframe('AsteroidsFrame')"> Toggle Iframe </button>
+                <p>In-browser playable version of asteroids, using vectors</p>
+            </div>
+                <iframe id="AsteroidsFrame" src="https://rwrftr.github.io/AsteroidsGame/" frameborder="0" width="1280" height="720"></iframe>
+            </article></li>
+
+            <div id="Triange-text"><li><article>
+                <a href="https://rwrftr.github.io/SierpinskiTriangle/" target="_blank"><h3>Sierpinski Triangle</h3></a>
+                <button onclick="toggleIframe('TraingleFrame')"> Toggle Iframe </button>
+                <p>movable drawing of a Sierpinski triangle, </p>
+            </div>
+                <iframe id="TraingleFrame" src="https://rwrftr.github.io/SierpinskiTriangle/" frameborder="0" width="1280" height="720"></iframe>
+            </article></li>
+        </ul>
+    </section>
+    
+</body>
+
+<footer>
+<!-- Contact Info -->
+    <section id="Contact">
+        <h2>Contact me:</h2>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/roan-rafter-a71b83263" target="_blank" style=" background: #0072b1; color: aliceblue; border: 1px solid darkblue;"> LinkedIn </a>
+            <button onclick="playSound()" style=" background: greenyellow; color: green; border: 1px solid green;">Frog Button</button>
+        </div>
+        <br><br>
+
+     <!-- Contact Form-->      
+        <form id="contactForm">
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name here" name="Name:" required>
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email here" name="Email:" pattern="\w+@\w+\.\w+" required>
+    
+            <label>Subject</label>
+            <input type="text" placeholder="Message Subject" name="Subject:">
+
+            <label>Message</label>
+            <input type="text" name="Message:" style="width: 20%;" required>
+
+            <label>Submit</label>
+            <input type="button" name="Submit" value="x">
+        </form>
+    </section>
+<!-- Attribution -->
+    <a href="https://www.fontspace.com/led-simple-st-font-f25060" title="LED font">LED font face created by Southype - Fontspace</a>
+    <br>
+    <a href="https://freesound.org/people/egomassive/sounds/536759/">Frog.ogg</a> by <a href="https://freesound.org/people/egomassive/">egomassive</a> | License: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons 0</a>
+    <br>
+    <a target="_blank" href="https://icons8.com/icon/MN4zNxgAPojy/seagull">Seagull</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    <br>
+    <a href="https://commons.wikimedia.org/wiki/File:Interior_of_ETI_(%C5%A0koda)_14TrSF_bus_number_5538.JPG">Weegee010</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+</footer>
+
+
+</html>
